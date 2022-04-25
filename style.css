@@ -3,63 +3,141 @@
     src: url(font/Outfit-VariableFont_wght.ttf);
 }
 
+html{
+    height: 100%;
+}
+
 body{
     background-color: hsl(217, 54%, 11%);
     font-family: Outfit;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
+    margin:0;
 }
 
-h1, #name{
+.description h1{
     color: hsl(0, 0%, 100%);
 }
 
-p{
-    color:hsl(215, 51%, 70%);
+.footer span{
+    color: hsl(0, 0%, 100%);
 }
 
-#card_footer img{
-    width: 10px;
-    height: 10px;
+.main_card p, .attribution p{
+    color: hsl(215, 51%, 70%);
 }
 
-#eth{
-    color:hsl(178, 100%, 50%);
-}
 
-#main_card{
+.main_card{
+    background-color: hsl(216, 50%, 16%) ;
+    height: auto;
     width: 330px;
-    height: 600px;
-    background-color: hsl(216, 50%, 16%);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 10px;
 }
 
-#main_card img{
-    border-radius: 5px;
+.main_img{
+    border-radius: 10px;
     margin-top: 15px;
     width: 300px;
     height: 300px;
+    background-image: url("images/image-equilibrium.jpg");
+    background-size: contain;
 }
 
-#text{
-    margin-left: 15px;
+.main_text{
+    max-width: 330px;
+    margin-left:15px;
     margin-right: 15px;
 }
 
-#card_footer{
+.description h1{
+    font-size: 1.4em;
+    /* margin-left: 15px;
+    margin-right: 15px; */
+}
+
+.description p{
+    font-size: 1.1em;
+    /* margin-left: 15px;
+    margin-right: 15px; */
+}
+
+span, .eth{
+    color: hsl(178, 100%, 50%);
+}
+
+.sub_text{
     display: flex;
     justify-content: space-between;
 }
 
-.attribution{
-    font-size: 11px; 
-    text-align: center;
-    color: hsl(228, 45%, 44%);
+.eth_value{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.eth_value img{
+    width: auto;
+    height: auto;
+}
+
+.eth_value p{
+    margin-left:10px;
+}
+
+.eth_time img{
+    width: auto;
+    height:auto;
+    margin-right: 10px;
+}
+
+.eth_time{
+    display: flex;
+    align-items: center;
+}
+
+.main_text hr{
+    width: 100%;
+    border:1px solid hsl(215, 32%, 27%);
+}
+
+.footer img{
+    width: 2em;
+    height: 2em;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.footer img{
+    margin-right: 10px;
+}
+
+/* Hover */
+
+.description h1:hover, .footer span:hover{
+    color:hsl(178, 100%, 50%);
+}
+
+.main_img:hover{
+    fill: hsl(178, 100%, 50%);
+    filter:;
+    /* color: hsl(178, 100%, 50%);
+    background-image: url("images/icon-view.svg") no-repeat center;
+    z-index: 1; */
 }
