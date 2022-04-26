@@ -50,6 +50,22 @@ body{
     height: 300px;
     background-image: url("images/image-equilibrium.jpg");
     background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_img_overlay{
+    background-color: rgba(0,255,247,0.5);
+    width: 100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.3s, 0.3s;
 }
 
 .main_text{
@@ -58,19 +74,20 @@ body{
     margin-right: 15px;
 }
 
+.description h1, .description p, span{
+    transition-property: color;
+    transition-duration: 0.3s;
+}
+
 .description h1{
     font-size: 1.4em;
-    /* margin-left: 15px;
-    margin-right: 15px; */
 }
 
 .description p{
     font-size: 1.1em;
-    /* margin-left: 15px;
-    margin-right: 15px; */
 }
 
-span, .eth{
+span, .eth_value p{
     color: hsl(178, 100%, 50%);
 }
 
@@ -134,10 +151,6 @@ span, .eth{
     color:hsl(178, 100%, 50%);
 }
 
-.main_img:hover{
-    fill: hsl(178, 100%, 50%);
-    filter:;
-    /* color: hsl(178, 100%, 50%);
-    background-image: url("images/icon-view.svg") no-repeat center;
-    z-index: 1; */
+.main_img_overlay:hover{
+    opacity: 1;
 }
